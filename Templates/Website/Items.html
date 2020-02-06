@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container movie-background">
+    <div class="row">
+        <div class="col-md-12 col-12">
+            <h4 class="text-center"> Now Showing </h4>
+        </div>
+         {% for hotels in Hotel   %}
+        <div class="col-lg-4 col-12">
+
+            <div class="img-movie">
+                <img src="http://127.0.0.1:8000/media/{{hotels.hotel_img}}" alt="movie" class="d-block img-thumbnail">
+            </div>
+
+            <div class="functionality">
+                <a href="/Booking/{{hotels.id}}"> <span class="circular">  </span> Book </a>
+                <a href="#"> <span class="circular">  </span> Details</a>
+            </div>
+            <h5 class="title"> {{hotels.hotel_name}} </h5>
+
+
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{%  endblock %}

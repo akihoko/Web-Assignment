@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <div class="container">
+     <div class="row">
+         <div class="col-md-3"></div>
+         <div class="col-md-6">
+              <div class="login">
+                  <h4 class="text-white text-center" > Register </h4>
+             <form method="post">
+                 {% csrf_token  %}
+                 <div class="form-group">
+                     <label> Firstname  </label>
+                     <div class="input-group">
+                         <div class="input-group-append">
+                             <span class="input-group-text iconn"><i class="fas fa-user-tie"></i></span>
+                         </div>
+                         <input type="text" name="fn" placeholder="Firstname"  class="form-control">
+                     </div>
+                 </div>
+                  <div class="form-group">
+                     <label> Lastname  </label>
+                     <div class="input-group">
+                         <div class="input-group-append">
+                             <span class="input-group-text iconn"><i class="fas fa-user-tie"></i></span>
+                         </div>
+                         <input type="text" name="ln" placeholder="Lastname"  class="form-control">
+                     </div>
+                 </div>
+
+                  <div class="form-group">
+                     <label> Email </label>
+                     <div class="input-group">
+                         <div class="input-group-append">
+                             <span class="input-group-text iconn"><i class="fas fa-envelope"></i></span>
+                         </div>
+                         <input type="email" name="email" placeholder="Email"  class="form-control">
+                     </div>
+                 </div>
+
+                  <div class="form-group">
+                     <label> Username  </label>
+                     <div class="input-group">
+                         <div class="input-group-append">
+                             <span class="input-group-text iconn"><i class="far fa-user"></i></span>
+                         </div>
+                         <input type="text" name="un" placeholder="Username"  class="form-control">
+                     </div>
+                 </div>
+
+                   <div class="form-group">
+                     <label> Password  </label>
+                     <div class="input-group">
+                         <div class="input-group-append">
+                             <span class="input-group-text iconn"><i class="fas fa-lock"></i></span>
+                         </div>
+                         <input type="password" name="pw" placeholder="Password" class="form-control">
+                     </div>
+                 </div>
+                 <button type="submit" class="btn  btn-block"> Register  </button>
+             </form>
+         </div>
+
+         </div>
+     </div>
+ </div>
+
+{% endblock %}
