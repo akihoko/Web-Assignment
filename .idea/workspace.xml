@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="affe3b6f-5a36-4a51-8838-08dab463bf48" name="Default Changelist" comment="" />
+    <list default="true" id="affe3b6f-5a36-4a51-8838-08dab463bf48" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/Website/mybooking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Book/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Book/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Book/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Website/Booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Website/Booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Website/Deals.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Website/Deals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Website/Items.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Website/Items.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Website/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Website/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Website/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Website/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/javascript/java.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/javascript/java.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +32,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1X6Mx9RbVWtAXEo5AYIQCjiei1t" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,6 +45,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -60,14 +82,22 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="277" y="74" key="SettingsEditor" timestamp="1580368841051">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="74" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1580368841051" />
-    <state x="465" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1580972039248">
+    <state x="465" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1581247776351">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="465" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1580972039248" />
+    <state x="465" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1581247776351" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1581159131952">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1581159131952" />
   </component>
 </project>

@@ -1,88 +1,65 @@
 {% extends 'base.html' %}
-{% load static %}
-
+{% load static  %}
 {% block content %}
 
-<section class="landing-text text-center">
-    <h1>Explore The World <br>
-        <p><em>Life is short and the world is wide</em></p>
-    </h1>
-
-
-    <div class="customize">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search your Destination">
-
-            <div class="input-group-append">
-                <button type="submit" class="input-group-text btn">Search</button>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-
-<div class="container-fluid hotel-Solo">
-
+<div class="container hotels">
     <div class="row">
-        <div class="col-md-1 d-none d-md-block"></div>
-
-        <div class="col-md-2 col-6">
-            <div class="img-info">
-                <img src="http://127.0.0.1:8000/media/{{Link.logo}}" alt="img" class="d-block">
-            </div>
-        </div>
-        <div class="col-md-5 col-12">
-            <div class="heading">
-                <h4> {{Link.hotel}} <span class="pricetag"> $45 | $300 | $800 </span></h4>
-                <p>{{Link.description}} </p>
-                <div class="buttons">
-                    <button class="btn" data-target="#bookform" data-toggle="modal" type="button"
-                            name="button" value="button">Book
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-        <div class="col-md-4 d-none d-md-block">
-
-
-        </div>
-
-
         <div class="col-md-12">
-            <div class="wrapper owl-carousel owl-theme">
-                <div class="Solo">
-                    <img src="http://127.0.0.1:8000/media/{{Link.img1}}" alt="Hotel" class="d-block">
-                </div>
-
-                <div class="Solo">
-                    <img src="http://127.0.0.1:8000/media/{{Link.img2}}" alt="Hotel" class="d-block">
-                </div>
-
-                <div class="Solo">
-                    <img src="http://127.0.0.1:8000/media/{{Link.img3}}" alt="Hotel" class="d-block">
-                </div>
-                <div class="Solo">
-                    <img src="http://127.0.0.1:8000/media/{{Link.img4}}" alt="Hotel" class="d-block">
-                </div>
-
+            <h5 class="text-center"> My Booking </h5>
+            <div class="bought">
+                <a href="#" class="abcd" onmouseover="mouseclick()" onmouseout="mous()" data-toggle="collapse"
+                   data-target="#ticketsbought">
+                    Bookings
+                    <span class="arrow">  <i class="fas fa-caret-right right"></i> <i
+                            class="fas fa-caret-down down"></i> </span>
+                </a>
 
             </div>
-
         </div>
+        <div class="col-md-12">
+            <div class="collapse" id="ticketsbought">
 
-    </div>
-</div>
+                <table class="table">
 
+                    <thead class="thead-dark">
+                    <tr class="text-center">
 
-<div class="modal fade" id="bookform">
+                        <th scope="col">Hotel</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">No. of Guests</th>
+
+                        <th scope="col">No. of Rooms</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">BookedDate</th>
+                         <th scope="col">BookedFor</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                    </thead>
+                    {% for rooms in Room %}
+                    <tbody class="bg-dark text-white">
+                    <tr class="text-center">
+
+                        <td>{{rooms.hotel}}</td>
+                        <td>{{rooms.Room_type}}</td>
+                        <td>{{rooms.Numberofguests}}</td>
+                          <td>{{rooms.Numberofrooms}}</td>
+                        <td>${{rooms.Price}}</td>
+                        <td>{{rooms.Duration}}</td>
+                        <td>{{rooms.BookedDate}}</td>
+                        <td>{{rooms.BookedFor}}</td>
+
+                        <td> <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#updateForm{{ rooms.id }}" > Update  </a>   </td>
+                        <td> <a href="/tickets/delete/{{rooms.id}}" class="btn btn-danger"> Delete  </a>   </td>
+
+                    </tr>
+
+<div class="modal fade" id="updateForm{{ rooms.id }}">
     <div class="modal-dialog" role="dialog">
         <div class="modal-content contentt">
             <div class="modal-header">
-                <h5 class="modal-title">Book Your Tickets</h5>
+                <h5 class="modal-title">Book Your Ticket</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">X</span>
                 </button>
@@ -94,6 +71,17 @@
                             <div class="form-book">
                                 <form method="POST" name="form-value">
                                     {% csrf_token %}
+                                     <div class="form-group">
+                                        <label> Id: </label>
+                                        <div class="input-group">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text icon-register"> <i
+                                                        class="fas fa-film"></i>  </span>
+                                            </div>
+                                            <input type="text" id="id" name="id"  class="form-control"
+                                                   value="{{rooms.id}}"  readonly>
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label> Hotel name: </label>
                                         <div class="input-group">
@@ -101,8 +89,8 @@
                                                 <span class="input-group-text icon-register"> <i
                                                         class="fas fa-film"></i>  </span>
                                             </div>
-                                            <input type="text" id="hotelName" name="hotelName" class="form-control"
-                                                   value="{{Link.hotel}}" readonly>
+                                            <input type="text" id="hotelName" name="hotelName"  class="form-control"
+                                                   value="{{rooms.hotel}}" readonly>
                                         </div>
                                     </div>
 
@@ -116,9 +104,9 @@
                                             <select class="form-control" name="type" id="type"
                                                     onchange="priceDetermine()" required>
 
-                                                <option value="Budget"> Budget</option>
-                                                <option value="Medium"> Medium</option>
-                                                <option value="Deluxe"> Deluxe</option>
+                                                <option value="Budget" {% if rooms.Room_type == "Budget" %} selected {% endif %} > Budget</option>
+                                                <option value="Medium" {% if rooms.Room_type == "Medium" %} selected {% endif %} > Medium</option>
+                                                <option value="Deluxe" {% if rooms.Room_type == "Deluxe" %} selected {% endif %} > Deluxe</option>
 
                                             </select>
                                         </div>
@@ -130,7 +118,7 @@
                                                 <span class="input-group-text icon-register"> <i
                                                         class="fas fa-flag"></i> </span>
                                             </div>
-                                            <input type="number" id="noP" name="no" class="form-control" required>
+                                            <input type="number" id="noP" value="{{ rooms.Numberofguests }}" name="no" class="form-control" required>
                                         </div>
                                     </div>
 
@@ -142,7 +130,7 @@
                                                         class="fas fa-flag"></i> </span>
                                             </div>
                                             <input type="number" id="no" name="noR" class="form-control"
-                                                   oninput="priceDetermine()" required>
+                                                   oninput="priceDetermine()"  value="{{ rooms.Numberofrooms }}"required>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -153,7 +141,7 @@
                                                         class="fas fa-film"></i>  </span>
                                             </div>
                                             <input type="date" id="date" name="date" class="form-control"
-                                                   min="2020-02-13" max="2020-03-30" required>
+                                                   min="2020-02-13" max="2020-03-30" value="{{ rooms.BookedFor }}" required>
                                         </div>
                                     </div>
 
@@ -164,7 +152,7 @@
                                                 <span class="input-group-text icon-register"> <i
                                                         class="fas fa-film"></i>  </span>
                                             </div>
-                                            <input type="number" id="duration" name="duration" class="form-control">
+                                            <input type="number" id="duration" name="duration" value="{{rooms.Duration}}" class="form-control">
                                         </div>
                                     </div>
 
@@ -175,13 +163,13 @@
                                                 <span class="input-group-text icon-register"> <i
                                                         class="fas fa-film"></i>  </span>
                                             </div>
-                                            <input type="text" id="price" name="price" class="form-control" readonly>
+                                            <input type="text" id="price" name="price" value="" class="form-control" readonly>
                                         </div>
                                     </div>
 
 
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
-                                    <button type="submit" value="submit" name="submit" class="btn btn-primary">Book
+                                    <button type="submit" value="submit" name="submit" class="btn btn-primary">Update
                                     </button>
                                 </form>
                             </div>
@@ -203,5 +191,16 @@
     </div>
 </div>
 
+
+
+                    </tbody>
+                    {% endfor %}
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

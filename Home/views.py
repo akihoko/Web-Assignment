@@ -20,7 +20,7 @@ def register(request):
         password = request.POST['pw']
         user=User.objects.create_user(first_name=fn,last_name=ln,email=email,username=un,password=password)
         user.save()
-        return redirect("Home/login")
+        return redirect("/Home/login")
     return render(request,"Website/register.html")
 
 def login(request):

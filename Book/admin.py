@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from Book.models import items, movies
+from Book.models import items, Hotels
 
 
 class itemAdmin(admin.ModelAdmin):
@@ -11,4 +11,4 @@ class hotelAdmin(admin.ModelAdmin):
     list_display = ("hotel","description","logo","img1","img2","img3","img4")
 
 admin.site.register(items,itemAdmin)
-admin.site.register(movies,hotelAdmin)
+admin.site.register(Hotels,hotelAdmin)

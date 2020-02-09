@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 
 # Create your models here.
@@ -9,7 +10,7 @@ class items(models.Model):
     def __str__(self):
         return self.hotel_name
 
-class movies(models.Model):
+class Hotels(models.Model):
     hotel=models.ForeignKey(items,on_delete=models.CASCADE)
     description=models.TextField()
     logo=models.FileField(blank=True)
@@ -18,5 +19,15 @@ class movies(models.Model):
     img3 = models.FileField(blank=True)
     img4 = models.FileField(blank=True)
 
+class Room(models.Model):
+    hotel=models.ForeignKey(items,on_delete=models.CASCADE)
+    user=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    Room_type=models.CharField(max_length=70)
+    Numberofguests=models.IntegerField()
+    Numberofrooms=models.IntegerField()
+    Price=models.IntegerField()
+    Duration=models.IntegerField()
+    BookedDate=models.DateField()
+    BookedFor=models.DateField()
 
 

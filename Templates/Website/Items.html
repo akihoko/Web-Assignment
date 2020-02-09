@@ -2,22 +2,41 @@
 {% load static %}
 
 {% block content %}
+<section class="landing-text text-center">
+            <h1>Explore The World <br>
+            <p><em>Life is short and the world is wide</em></p>
+        </h1>
+     <div class="customize">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search your Destination" readonly>
 
-<div class="container movie-background">
+                <div class="input-group-append">
+                    <button type="submit" class="input-group-text btn">Search</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        </div>
+    </section>
+
+<div class="container-fluid hotelback">
     <div class="row">
         <div class="col-md-12 col-12">
-            <h4 class="text-center"> Now Showing </h4>
+            <h4 class="text-center"> Hotels </h4>
         </div>
          {% for hotels in Hotel   %}
         <div class="col-lg-4 col-12">
 
-            <div class="img-movie">
+            <div class="img-hotel">
                 <img src="http://127.0.0.1:8000/media/{{hotels.hotel_img}}" alt="movie" class="d-block img-thumbnail">
             </div>
 
             <div class="functionality">
-                <a href="/Booking/{{hotels.id}}"> <span class="circular">  </span> Book </a>
-                <a href="#"> <span class="circular">  </span> Details</a>
+                <a href="/Booking/{{hotels.id}}" class="btn"> Book </a>
+                <a href="#" class="btn">  Details</a>
             </div>
             <h5 class="title"> {{hotels.hotel_name}} </h5>
 

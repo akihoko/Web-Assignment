@@ -13,16 +13,19 @@
 }
 .landing-text h1{
     width: 100%!important;
-    position: absolute!important;
-    top: 38%;
+    position:absolute!important;
+    top: 48%;
+    /*left: 0;
+    justify-content: center;*/
+
     z-index: 1;
     color: #fff!important;
     text-transform: uppercase;
 }
 .landing-text .customize{
 width: 100%!important;
-position: absolute!important;
-top: 55%;
+position:absolute!important;
+top: 65%;
  z-index: 1;
 
 }
@@ -643,11 +646,11 @@ p {
 }
 .login
 {
-    background: rgba(255,255,255,0.5);
+    background: lightblue;
     padding:20px;
     margin-bottom:50px;
     margin-top:20px;
-    border:10px solid white;
+    border:10px solid skyblue;
     border-radius:20px 0px 20px 0px;
 }
 .login label
@@ -664,43 +667,66 @@ background:white;
 {
 background: #64A8D1;
 }
-
-.movie-background {
-    background: black;
+//Do
+.hotelback {
+    background: white;
     padding: 5px;
 }
 
-.movie-background h4 {
-    font-size: 18px;
+.hotelback h4 {
+    font-size: 36px;
+    color: black;
     padding: 7px;
-    background: #011132;
+    background: #fff;
+    font-family: Sans-Serif;
+    font-weight: bolder;
+}
+.hotelback h5
+{
+    font-size: 24px;
+    color: black;
+    padding: 7px;
+    font-family: Sans-Serif;
+    font-weight: bolder;
+    text-align: Center;
 }
 
-.img-movie {
+.img-hotel {
     width: 100%;
     height: 450px;
     overflow: hidden;
     padding: 0px;
 }
 
-.img-movie img {
+.img-hotel img {
     width: 100%;
     height: 450px;
     transition: all 1.5s ease;
 }
 
-.img-movie:hover img,
-.img-about:hover img {
+.img-hotel:hover img,
+.img-hotel:hover img {
     transform: scale(1.1);
+}
+.buttons button
+{
+ color: white;
+ background: gray;
+}
+.buttons button:hover
+{
+ color: gray;
+ background: white;
 }
 
 .functionality {
-    height: 30px;
+    height: 38px;
     width: 100%;
-    background: red;
+    background: linear-gradient(#2d557d, #9610fb);
     position: relative;
     z-index: 2;
-    margin-top: -30px;
+    margin-top: -38px;
+    border-radius: 5px;
 }
 
 .circular {
@@ -735,6 +761,62 @@ background: #64A8D1;
     margin-left: 5px;
     font-size: 16px;
     color: gray;
+}
+
+.hotels {
+    color: white;
+    background: #01113266;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.hotels h5 {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.bought {
+    background: rgba(255, 255, 255, 0.4);
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.bought a {
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 4px;
+}
+
+.bought a:hover {
+    text-decoration: none;
+}
+
+.arrow {
+    float: right;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    padding-top: 1px;
+}
+
+.arrow i {
+    color: darkblue;
+    font-size: 30px;
+}
+
+.down {
+    display: none;
+}
+.functionality .btn:hover
+{
+background:white;
+color: linear-gradient(#2d557d, #9610fb);
+}
+.functionality .btn
+{
+    position: relative;
+    margin-left: 22%;
 }
 
 
